@@ -1,0 +1,910 @@
+/* Go's movement language, with a compact editorial hierarchy. */
+.hero-photo {
+  object-position: center 55%;
+}
+.hero-photo-caption span {
+  background: var(--forest);
+  padding: 14px 18px;
+  text-shadow: none;
+}
+.hero-photo-caption > .arrow {
+  padding: 12px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--forest);
+}
+/* The hero owns the display weight. Supporting headings are quieter. */
+.about-title,
+.product-story h2,
+.product-story h3,
+.principles-story h2,
+.principles-story h3,
+.partners-heading h2,
+.partner-row h3,
+.audience-router > h2 {
+  font-family: var(--font-dm), sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+.section-space {
+  padding-block: clamp(64px, 6vw, 96px);
+}
+.about-title {
+  font-size: clamp(36px, 4.1vw, 62px);
+  line-height: 1.1;
+}
+.about-bottom {
+  margin-top: 36px;
+}
+.body-copy p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.product-story {
+  background: var(--white);
+}
+.product-story-intro {
+  padding-block: 72px 38px;
+}
+.journey-explorer {
+  scroll-margin-top: 90px;
+}
+.journey-explorer-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 24px;
+}
+.journey-explorer-heading h3 {
+  font-size: clamp(34px, 3.4vw, 52px);
+}
+.journey-explorer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 8%;
+  align-items: center;
+}
+.journey-image-stack {
+  height: clamp(380px, 32vw, 480px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  background: var(--forest);
+}
+.journey-scene {
+  position: absolute;
+  inset: 0;
+}
+.journey-model-preview {
+  position: absolute;
+  inset: 0;
+  background: var(--cloud);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.journey-model-preview[data-ready="true"] {
+  opacity: 1;
+}
+.journey-model-preview canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-model-preview {
+    transition: none;
+  }
+}
+.journey-image-label {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: var(--cloud);
+  font-size: 12px;
+}
+.journey-options [role="tablist"] {
+  display: flex;
+  flex-direction: column;
+}
+.journey-options [role="tab"] {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--forest);
+  text-align: left;
+  display: grid;
+  grid-template-columns: 8px 1fr 20px;
+  gap: 16px;
+  align-items: center;
+  min-height: 66px;
+  padding: 16px 10px 16px 0;
+  cursor: pointer;
+  font-family: var(--font-dm);
+  font-size: clamp(19px, 1.7vw, 26px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  transition: background 0.2s;
+}
+.journey-options [role="tab"][aria-selected="true"] {
+  background: var(--cloud);
+}
+.journey-option-dot {
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0;
+  margin-left: 8px;
+}
+.journey-options [aria-selected="true"] .journey-option-dot {
+  opacity: 1;
+}
+.journey-options [role="tab"] .arrow {
+  opacity: 0.35;
+  width: 18px;
+  height: 18px;
+}
+.journey-options [aria-selected="true"] .arrow {
+  opacity: 1;
+}
+.journey-contact {
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  gap: 28px;
+  min-height: 64px;
+  padding-block: 20px;
+  font-size: var(--type-label);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.journey-contact:hover span {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+/* Supporting principles: one evolving illustration and four concise points. */
+.principles-story {
+  background: var(--forest);
+  color: var(--cloud);
+  padding-block: 76px;
+}
+.principles-layout {
+  display: grid;
+  gap: 48px;
+}
+.principles-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 12%;
+}
+.principles-summary h2 {
+  font-size: clamp(38px, 4.1vw, 62px);
+  line-height: 1.07;
+  max-width: 480px;
+}
+.principles-summary > p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--mint);
+  max-width: 340px;
+}
+.principles-reading {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.principle-row {
+  padding-top: 24px;
+  border-top: 1px solid #b9efc433;
+}
+.principle-row h3 {
+  font-size: clamp(24px, 2vw, 30px);
+  line-height: 1.13;
+}
+.principle-row p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #d0ddd4;
+  margin-top: 14px;
+  max-width: 380px;
+}
+/* The cropped mark is taken directly from the brand book's composition language. */
+.partners-heading h2 {
+  font-size: clamp(38px, 4.1vw, 62px);
+  line-height: 1.08;
+}
+.partners-grid {
+  margin-top: 26px;
+}
+.partners-heading > p {
+  font-size: 14px;
+  margin-block: 22px;
+}
+.partner-row {
+  padding-block: 22px;
+}
+.partner-row h3 {
+  font-size: 24px;
+}
+.audience-router {
+  padding-top: clamp(64px, 6vw, 96px);
+  padding-bottom: 76px;
+}
+.audience-router > h2 {
+  font-size: clamp(34px, 3.5vw, 52px);
+  margin-bottom: 30px;
+}
+.audience-link {
+  min-height: 210px;
+  padding: 26px;
+}
+.audience-link h3 {
+  margin-block: 18px 12px;
+}
+.audience-link p {
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+.audience-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.audience-item .audience-link {
+  flex: 1;
+}
+.audience-avatar {
+  height: clamp(170px, 16vw, 230px);
+  width: 100%;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.audience-avatar canvas {
+  display: block;
+  max-width: 100%;
+}
+.audience-avatar[data-render="unavailable"] {
+  display: none;
+}
+.site-footer {
+  padding-top: 72px;
+}
+.closing {
+  padding-bottom: 54px;
+}
+.closing-heading h2 {
+  font-size: clamp(48px, 5.3vw, 80px);
+}
+.footer-links {
+  padding-block: 32px;
+}
+.closing-copy p {
+  position: relative;
+}
+@media (hover: hover) and (pointer: fine) {
+  .journey-options [role="tab"]:hover {
+    background: var(--cloud);
+  }
+}
+@media (max-width: 900px) {
+  .journey-explorer-grid {
+    gap: 36px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .journey-options [role="tab"] {
+    font-size: 21px;
+    gap: 12px;
+    min-height: 68px;
+  }
+  .journey-image-stack {
+    height: 400px;
+    border-radius: 0;
+  }
+  .principles-layout {
+    gap: 8%;
+  }
+  .principles-summary h2 {
+    font-size: 44px;
+  }
+  .principle-row h3 {
+    font-size: 29px;
+  }
+}
+@media (max-width: 600px) {
+  .section-space {
+    padding-block: 56px;
+  }
+  .about-title {
+    font-size: 36px;
+  }
+  .about-bottom {
+    margin-top: 28px;
+    gap: 24px;
+  }
+  .product-story-intro {
+    padding-block: 56px 30px;
+  }
+  .journey-explorer-heading {
+    margin-bottom: 24px;
+  }
+  .journey-explorer-heading h3 {
+    font-size: 34px;
+    max-width: 300px;
+  }
+  .journey-explorer-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .journey-image-stack {
+    height: 320px;
+    border-radius: 0;
+  }
+  .journey-image-label {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    font-size: 11px;
+    padding: 14px;
+  }
+  .journey-options [role="tab"] {
+    min-height: 62px;
+    font-size: 21px;
+  }
+  .principles-story {
+    padding-block: 56px;
+  }
+  .principles-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .principles-summary {
+    position: relative;
+    top: auto;
+    display: grid;
+    grid-template-columns: 1fr 95px;
+    gap: 18px;
+  }
+  .principles-summary h2 {
+    font-size: 36px;
+  }
+  .principles-summary > p {
+    grid-column: 1/-1;
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .principles-reading {
+    margin-top: 20px;
+  }
+  .principle-row {
+    padding-block: 24px;
+  }
+  .principle-row h3 {
+    font-size: 27px;
+  }
+  .principle-row p {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  .partners-heading h2 {
+    font-size: 36px;
+  }
+  .partners-grid {
+    gap: 30px;
+  }
+  .partner-row h3 {
+    font-size: 24px;
+  }
+  .audience-router {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  .audience-router > h2 {
+    font-size: 34px;
+  }
+  .audience-link {
+    min-height: 220px;
+    padding: 24px;
+  }
+  .site-footer {
+    padding-top: 56px;
+  }
+  .closing {
+    padding-bottom: 40px;
+  }
+  .closing-heading h2 {
+    font-size: 48px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .principles-summary {
+    position: relative;
+    top: auto;
+  }
+  .hero-photo-caption {
+    display: none;
+  }
+}
+
+/* Supporting copy stays compact; imagery carries the larger moments. */
+@media (max-width: 900px) {
+  .principles-reading {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .principles-layout {
+    gap: 30px;
+  }
+  .principles-summary {
+    display: block;
+  }
+  .principles-summary > p {
+    margin-top: 18px;
+  }
+  .principles-reading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 0;
+  }
+  .principle-row {
+    padding: 22px 0 0;
+  }
+  .audience-link {
+    min-height: 190px;
+  }
+  .audience-link h3 {
+    margin-top: 0;
+  }
+}
+.about-signature > p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 18px;
+  max-width: 180px;
+}
+.action,
+.header-contact,
+.menu-trigger,
+.hero-period-arrow,
+.hero-photo-caption > .arrow,
+.footer-baseline a {
+  border-radius: 0;
+}
+
+/* One shared grid aligns each image, headline, paragraph and action. */
+.product-story-heading {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: end;
+  margin-top: 24px;
+}
+.product-story-heading h2 {
+  font-size: clamp(40px, 4.7vw, 68px);
+  line-height: 1.06;
+}
+.product-story-heading p {
+  max-width: 470px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.product-story-audiences {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 32px;
+}
+.product-story-audiences article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  scroll-margin-top: 112px;
+  min-width: 0;
+}
+.product-frame {
+  position: relative;
+  height: clamp(260px, 29vw, 420px);
+  overflow: hidden;
+  background: var(--cloud);
+  margin-bottom: 16px;
+}
+.product-frame img {
+  object-fit: cover;
+}
+.product-frame--passenger img {
+  object-position: 45% center;
+}
+.product-frame--chauffeur img {
+  object-position: 48% center;
+}
+.product-story-audiences h3 {
+  font-size: clamp(28px, 2.6vw, 38px);
+  line-height: 1.14;
+  max-width: 470px;
+  margin: 0;
+}
+.product-story-audiences p {
+  font-size: 14px;
+  max-width: 520px;
+  line-height: 1.7;
+  margin: 0;
+}
+.product-story-audiences .action {
+  min-height: 46px;
+  width: fit-content;
+  margin-top: 8px;
+  align-self: start;
+}
+@media (max-width: 600px) {
+  .product-story-heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .product-story-heading h2 {
+    font-size: clamp(36px, 10.8vw, 54px);
+  }
+  .product-story-heading p {
+    font-size: 14px;
+  }
+  .product-story-audiences {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+  .product-story-audiences article {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .product-frame {
+    height: 280px;
+    margin-bottom: 8px;
+  }
+  .product-story-audiences h3 {
+    font-size: 32px;
+  }
+}
+
+.about {
+  display: block;
+  padding-block: 64px;
+}
+.about > .section-label {
+  padding-top: 0;
+  margin-bottom: 26px;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 32px;
+  align-items: start;
+}
+.about-title {
+  grid-column: 1;
+  font-size: clamp(36px, 3.4vw, 50px);
+  line-height: 1.12;
+  max-width: 610px;
+}
+.about-bottom {
+  display: contents;
+}
+.about-signature {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.about-signature > p {
+  margin: 0;
+  max-width: none;
+}
+.about .body-copy {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  max-width: 570px;
+}
+@media (max-width: 600px) {
+  .about {
+    padding-block: 48px;
+  }
+  .about > .section-label {
+    margin-bottom: 22px;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about-title {
+    font-size: 36px;
+  }
+  .about .body-copy {
+    order: 1;
+  }
+  .about-signature {
+    order: 2;
+    gap: 16px;
+  }
+  .about-signature > p {
+    font-size: 11px;
+  }
+}
+
+/* Keep the image and its baseline together throughout the GO reveal. */
+.hero-baseline {
+  margin-top: 0;
+  padding-block: 22px;
+  min-height: 64px;
+  line-height: 1.5;
+}
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .hero-visual-wrap {
+    --hero-stage-height: min(800px, calc(100svh - 180px));
+  }
+  .hero-visual {
+    height: var(--hero-stage-height);
+    aspect-ratio: auto;
+  }
+  .hero-stencil-frame {
+    max-width: calc(var(--hero-stage-height) * 6661 / 2817);
+  }
+}
+.product-story-audiences .action {
+  height: 54px;
+}
+
+.hero-stencil-frame {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 6661 / 2817;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Fill beside the fitted logo on short laptop windows. */
+  box-shadow: 0 0 0 100vmax var(--white);
+}
+.hero-stencil-frame::before,
+.hero-stencil-frame::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 150vh;
+  background: var(--white);
+}
+.hero-stencil-frame::before {
+  bottom: calc(100% - 1px);
+}
+.hero-stencil-frame::after {
+  top: calc(100% - 1px);
+}
+
+.vision-story {
+  background: var(--white);
+  padding-block: 56px;
+}
+.vision-layout,
+.partners-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 24px 56px;
+  align-items: start;
+}
+.vision-heading-group h2 {
+  font-family: var(--font-dm), sans-serif;
+  font-weight: 400;
+  font-size: clamp(34px, 3.2vw, 46px);
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+  max-width: 520px;
+}
+.vision-signature {
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.45;
+  max-width: 360px;
+}
+.vision-narrative {
+  max-width: 570px;
+  align-self: center;
+}
+.vision-lead {
+  align-self: center;
+  font-size: 22px;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
+  max-width: 510px;
+}
+.vision-body {
+  margin-top: 24px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--graphite);
+}
+.vision-body p + p {
+  margin-top: 18px;
+}
+@media (max-width: 760px) {
+  .vision-story {
+    padding-block: 48px;
+  }
+  .vision-layout,
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .vision-heading-group h2 {
+    font-size: 36px;
+  }
+  .vision-signature {
+    margin-top: 18px;
+    font-size: 16px;
+  }
+  .vision-lead {
+    font-size: 20px;
+  }
+  .vision-body {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+}
+
+/* A single cropped brand mark follows the principles copy in normal flow. */
+.principles-story {
+  padding-bottom: 0;
+}
+.principles-mark-window {
+  position: relative;
+  height: clamp(240px, 30vw, 430px);
+  margin-top: 52px;
+  overflow: hidden;
+  background: var(--green);
+  color: var(--forest);
+}
+.principles-motion-mark {
+  position: absolute;
+  width: 130%;
+  left: -15%;
+  top: 0;
+  transform: rotate(-8deg);
+}
+@media (max-width: 600px) {
+  .principles-mark-window {
+    height: 180px;
+    margin-top: 32px;
+  }
+  .principles-motion-mark {
+    width: 180%;
+    left: -40%;
+  }
+}
+
+.hero-stencil-frame > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.partnerships {
+  background: var(--cloud);
+}
+
+/* A live miniature sits beneath the expanding GO aperture. */
+.hero-visual {
+  background: var(--white);
+}
+.hero-model-backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--forest);
+  pointer-events: none;
+}
+.hero-photo-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: flex-end;
+  gap: 24px;
+  font-size: clamp(24px, 2.5vw, 40px);
+  line-height: 1.15;
+  pointer-events: none;
+}
+.hero-photo-caption span {
+  max-width: 560px;
+  width: 46%;
+  padding: 20px 24px;
+  text-wrap: balance;
+}
+@media (max-width: 900px) {
+  .hero-visual {
+    aspect-ratio: 1.35;
+  }
+  .hero-photo-caption {
+    display: flex;
+    gap: 12px;
+    font-size: clamp(16px, 3vw, 24px);
+  }
+  .hero-photo-caption span {
+    padding: 10px 12px;
+    max-width: 310px;
+    width: auto;
+  }
+  .hero-photo-caption > .arrow {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-stencil,
+  .hero-model-backdrop {
+    display: none;
+  }
+  .hero-photo-caption {
+    display: flex;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Size the heading from its capped content area, including at display zoom. */
+@media (min-width: 901px) {
+  .hero-top {
+    container-type: inline-size;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 25%);
+    column-gap: 32px;
+    align-items: start;
+    padding-top: 64px;
+    padding-bottom: clamp(32px, 4svh, 48px);
+  }
+  .hero h1 {
+    grid-column: 1;
+  }
+  .hero-support {
+    margin-top: 0;
+    /* Match the visible cap height of the Cal Sans display heading. */
+    padding-top: clamp(8px, 0.8cqi, 13px);
+    padding-bottom: 0;
+    max-width: none;
+  }
+}
+
+.hero-support .action {
+  display: flex;
+  /* GSAP owns the intro transform; a CSS transform transition delays it. */
+  transition: background 0.2s;
+}
+.hero-support h2 {
+  margin-bottom: 10px;
+}
+@media (min-width: 901px), (max-width: 600px) {
+  .hero-support p {
+    margin-bottom: 12px;
+  }
+}
+
+.journey-explorer-grid > *,
+.principles-reading > *,
+.partners-grid > *,
+.audience-links > *,
+.footer-links > *,
+.closing > * {
+  min-width: 0;
+}
+.action {
+  max-width: 100%;
+}
+.action-icon {
+  flex-shrink: 0;
+}

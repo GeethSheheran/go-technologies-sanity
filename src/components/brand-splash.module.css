@@ -1,0 +1,44 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #0e2f2c;
+  /* If JavaScript cannot hydrate, the homepage is still reachable. */
+  animation: fail-open 0s 5s forwards;
+}
+
+.splash[hidden] {
+  display: none;
+}
+
+.artwork {
+  width: min(360px, 72vw);
+}
+
+.artwork svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.copyright {
+  position: absolute;
+  bottom: max(28px, env(safe-area-inset-bottom));
+  inset-inline: 20px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+  color: #64716c;
+}
+
+@keyframes fail-open {
+  to {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

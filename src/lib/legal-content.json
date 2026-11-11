@@ -1,0 +1,909 @@
+{
+  "privacy": {
+    "title": "Privacy Notice",
+    "updated": "13 October 2026",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Welcome to Go Technologies."
+          },
+          {
+            "type": "paragraph",
+            "text": "At Go Technologies (\"Go Technologies\", \"we\", \"us\", or \"our\"), we respect your privacy and are committed to handling your personal information responsibly, transparently, and securely."
+          },
+          {
+            "type": "paragraph",
+            "text": "This Privacy Notice explains how we collect, use, store, disclose, and protect personal information when you visit our corporate website, contact us, or express interest in our products, services, or business partnerships."
+          },
+          {
+            "type": "paragraph",
+            "text": "We operate from Sri Lanka and aim to follow applicable data protection requirements, including Sri Lanka's Personal Data Protection Act No. 9 of 2022, as amended, to the extent its relevant provisions are in force."
+          }
+        ]
+      },
+      {
+        "id": "scope-of-this-notice",
+        "title": "Scope of This Notice",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This Privacy Notice applies to information processed through the Go Technologies corporate website at https://gotechnologies.lk and any related corporate communications covered by this notice."
+          },
+          {
+            "type": "paragraph",
+            "text": "It does not automatically govern the separate websites, applications, or services of products developed by Go Technologies, including GoChauffeur. Those products may have their own privacy notices describing their specific data practices."
+          }
+        ]
+      },
+      {
+        "id": "information-we-collect",
+        "title": "Information We Collect",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Depending on how you interact with our website, we may collect the following categories of information."
+          },
+          {
+            "type": "heading",
+            "text": "Information You Provide"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Name and contact details, including email address and phone number.",
+              "Company or organisation name, professional role, and business information.",
+              "Information submitted through contact forms, partnership inquiries, or email communications.",
+              "Other information you voluntarily provide when communicating with us."
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "Information Collected Automatically"
+          },
+          {
+            "type": "paragraph",
+            "text": "When you visit our website, certain technical information may be collected, including:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Internet Protocol (IP) address.",
+              "Browser type, device type, and operating system.",
+              "Pages visited, approximate visit duration, and referral sources.",
+              "Website performance and technical diagnostic information.",
+              "Cookie identifiers and related information, where applicable."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The information collected depends on the technologies and services enabled on our website."
+          }
+        ]
+      },
+      {
+        "id": "how-we-use-your-information",
+        "title": "How We Use Your Information",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We process personal information for purposes including:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Responding to inquiries and communicating with visitors.",
+              "Evaluating and managing potential partnerships and business relationships.",
+              "Providing information about Go Technologies and our products.",
+              "Operating, maintaining, and improving our website.",
+              "Understanding website usage and performance.",
+              "Detecting, preventing, and addressing security threats or misuse.",
+              "Complying with applicable laws and lawful requests.",
+              "Sending business or product updates where you have requested or otherwise lawfully agreed to receive them."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "We will not use your personal information for purposes incompatible with those communicated to you unless permitted or required by applicable law."
+          }
+        ]
+      },
+      {
+        "id": "legal-basis-for-processing",
+        "title": "Legal Basis for Processing",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Where required by applicable law, we process personal data on an appropriate legal basis, which may include:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Your consent.",
+              "Taking steps at your request before entering into an agreement or performing an agreement with you.",
+              "Compliance with applicable legal obligations.",
+              "Legitimate interests recognised under applicable law, subject to applicable safeguards and limitations."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The applicable basis depends on the purpose and circumstances of the processing."
+          },
+          {
+            "type": "paragraph",
+            "text": "Where consent is required, you may withdraw it through the available means, without affecting processing lawfully carried out before withdrawal."
+          }
+        ]
+      },
+      {
+        "id": "sharing-of-personal-information",
+        "title": "Sharing of Personal Information",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We do not sell personal information to third parties."
+          },
+          {
+            "type": "paragraph",
+            "text": "We may share relevant personal information with:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Website hosting, infrastructure, and technical service providers.",
+              "Communication, email, and customer inquiry management providers.",
+              "Website analytics providers, where enabled.",
+              "Professional advisers acting under appropriate confidentiality obligations.",
+              "Government authorities or regulatory bodies where legally required.",
+              "Other parties where you have authorised the disclosure or where another lawful basis applies."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "We limit such disclosures to information reasonably necessary for the relevant purpose and apply appropriate safeguards."
+          }
+        ]
+      },
+      {
+        "id": "international-data-transfers",
+        "title": "International Data Transfers",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Some service providers supporting our website or communications may process information outside Sri Lanka."
+          },
+          {
+            "type": "paragraph",
+            "text": "Where personal information is transferred internationally, we will take appropriate steps to comply with applicable data protection requirements and protect the information through suitable contractual, organisational, or technical safeguards."
+          }
+        ]
+      },
+      {
+        "id": "data-retention",
+        "title": "Data Retention",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We retain personal information only for as long as reasonably necessary to fulfil the purposes for which it was collected, including legitimate business, security, and legal requirements."
+          },
+          {
+            "type": "paragraph",
+            "text": "Retention periods may vary depending on the nature of the information, the purpose of processing, and applicable legal obligations."
+          },
+          {
+            "type": "paragraph",
+            "text": "When information is no longer required, we will take reasonable steps to delete, anonymise, or securely dispose of it."
+          }
+        ]
+      },
+      {
+        "id": "data-security",
+        "title": "Data Security",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We take reasonable technical and organisational measures designed to protect personal information against unauthorised access, loss, misuse, alteration, and disclosure."
+          },
+          {
+            "type": "paragraph",
+            "text": "However, no internet-based service or electronic storage system can guarantee absolute security."
+          }
+        ]
+      },
+      {
+        "id": "your-privacy-rights",
+        "title": "Your Privacy Rights",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Subject to applicable law, you may have rights relating to your personal information, including the right to:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Request access to personal data we hold about you.",
+              "Request correction of inaccurate or incomplete information.",
+              "Request erasure of personal information in applicable circumstances.",
+              "Withdraw consent where processing relies on consent.",
+              "Object to certain processing activities where applicable.",
+              "Exercise other rights available under applicable data protection law."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "To submit a privacy-related request, please contact us using the details provided below."
+          },
+          {
+            "type": "paragraph",
+            "text": "We may request reasonable information to verify your identity before processing certain requests."
+          },
+          {
+            "type": "paragraph",
+            "text": "You may also have the right to raise a complaint with the relevant data protection authority where applicable."
+          }
+        ]
+      },
+      {
+        "id": "cookies-and-analytics",
+        "title": "Cookies and Analytics",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Our website may use cookies or similar technologies to support essential website functionality, maintain security, and understand how visitors interact with our content."
+          },
+          {
+            "type": "paragraph",
+            "text": "For further information, please review our separate Cookie Policy."
+          },
+          {
+            "type": "paragraph",
+            "text": "Where applicable law requires consent for particular technologies, we will seek it before enabling them."
+          }
+        ]
+      },
+      {
+        "id": "third-party-websites",
+        "title": "Third-Party Websites",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Our website may contain links to third-party websites, including GoChauffeur and other external services."
+          },
+          {
+            "type": "paragraph",
+            "text": "We are not responsible for the privacy practices of independently operated third-party websites. We encourage visitors to review their respective privacy notices."
+          }
+        ]
+      },
+      {
+        "id": "children-s-privacy",
+        "title": "Children's Privacy",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Our corporate website is intended for a general business and adult audience and is not specifically directed towards children."
+          },
+          {
+            "type": "paragraph",
+            "text": "We do not knowingly seek to collect personal information from children through this corporate website."
+          },
+          {
+            "type": "paragraph",
+            "text": "If you believe that a child has provided personal information to us inappropriately, please contact us so that we can review the matter."
+          }
+        ]
+      },
+      {
+        "id": "updates-to-this-notice",
+        "title": "Updates to This Notice",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We may update this Privacy Notice periodically to reflect changes in our operations, website technologies, or applicable legal requirements."
+          },
+          {
+            "type": "paragraph",
+            "text": "The latest version will be published on this website with its updated effective date."
+          }
+        ]
+      },
+      {
+        "id": "contact-us",
+        "title": "Contact Us",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "For privacy-related questions, requests, or concerns, please contact:"
+          },
+          {
+            "type": "contact",
+            "lines": [
+              "Go Technologies",
+              "Sri Lanka",
+              "Email: hello@gotechnologies.lk",
+              "Website: https://gotechnologies.lk",
+              "Legal entity: Go Technologies (Private) Limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Website Terms",
+    "updated": "13 October 2026",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Welcome to the Go Technologies corporate website."
+          },
+          {
+            "type": "paragraph",
+            "text": "These Website Terms (\"Terms\") govern your access to and use of the Go Technologies website at https://gotechnologies.lk."
+          },
+          {
+            "type": "paragraph",
+            "text": "By accessing or using this website, you agree to these Terms, to the extent permitted by applicable law. If you do not agree, please discontinue use of the website."
+          }
+        ]
+      },
+      {
+        "id": "about-go-technologies",
+        "title": "About Go Technologies",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Go Technologies is a Sri Lanka-based technology venture focused on developing digital products and solutions that connect people, businesses, and services."
+          },
+          {
+            "type": "paragraph",
+            "text": "Our initial focus is travel and mobility through GoChauffeur, with a longer-term vision of developing scalable technology products for broader markets."
+          },
+          {
+            "type": "paragraph",
+            "text": "This corporate website provides information about Go Technologies, our initiatives, and potential opportunities for collaboration."
+          }
+        ]
+      },
+      {
+        "id": "website-purpose",
+        "title": "Website Purpose",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The information provided on this website is intended for general informational, corporate, and business communication purposes."
+          },
+          {
+            "type": "paragraph",
+            "text": "The website may provide information about:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Go Technologies and its vision.",
+              "Products and initiatives, including GoChauffeur.",
+              "Business and technology partnerships.",
+              "Opportunities for service providers and prospective collaborators.",
+              "Company announcements and contact information."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Unless expressly stated otherwise, content on this corporate website does not constitute a binding offer, service guarantee, or contractual commitment."
+          }
+        ]
+      },
+      {
+        "id": "products-and-third-party-services",
+        "title": "Products and Third-Party Services",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Go Technologies may develop, own, operate, or collaborate on separate digital products and platforms."
+          },
+          {
+            "type": "paragraph",
+            "text": "References or links to GoChauffeur or other products are provided for informational or navigational purposes."
+          },
+          {
+            "type": "paragraph",
+            "text": "Use of those products may be subject to their own terms, policies, eligibility requirements, and commercial agreements."
+          },
+          {
+            "type": "paragraph",
+            "text": "These Website Terms do not govern bookings, transport services, payments, refunds, cancellations, or chauffeur engagements carried out through GoChauffeur."
+          }
+        ]
+      },
+      {
+        "id": "acceptable-use",
+        "title": "Acceptable Use",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "You agree to use this website lawfully and responsibly."
+          },
+          {
+            "type": "paragraph",
+            "text": "You must not:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Use the website for unlawful, fraudulent, or misleading purposes.",
+              "Attempt unauthorised access to website systems, servers, or data.",
+              "Introduce malicious software or interfere with website functionality.",
+              "Use automated systems to disrupt the website or collect information in violation of applicable law.",
+              "Impersonate another person or misrepresent your identity when submitting inquiries.",
+              "Infringe the intellectual property rights or lawful interests of Go Technologies or third parties."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "We reserve the right to take reasonable measures to protect the website against misuse or security threats."
+          }
+        ]
+      },
+      {
+        "id": "intellectual-property",
+        "title": "Intellectual Property",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Unless otherwise stated, the content, branding, logos, text, graphics, illustrations, designs, and other original materials on this website are owned by Go Technologies or used with appropriate authorisation."
+          },
+          {
+            "type": "paragraph",
+            "text": "These materials are protected by applicable intellectual property laws."
+          },
+          {
+            "type": "paragraph",
+            "text": "You may access and use publicly available website content for personal, informational, or legitimate business reference purposes."
+          },
+          {
+            "type": "paragraph",
+            "text": "You may not reproduce, distribute, commercially exploit, modify, or use our branding or proprietary materials without prior written permission, except where permitted by applicable law."
+          },
+          {
+            "type": "paragraph",
+            "text": "All third-party trademarks and intellectual property remain the property of their respective owners."
+          }
+        ]
+      },
+      {
+        "id": "accuracy-of-information",
+        "title": "Accuracy of Information",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We make reasonable efforts to keep the information on our website accurate and current."
+          },
+          {
+            "type": "paragraph",
+            "text": "However, certain information may relate to products in development, proposed features, anticipated partnerships, or future business initiatives."
+          },
+          {
+            "type": "paragraph",
+            "text": "Such information is indicative and may change without notice."
+          },
+          {
+            "type": "paragraph",
+            "text": "We do not guarantee that all descriptions, features, timelines, or future plans presented on this website will remain unchanged or become commercially available."
+          }
+        ]
+      },
+      {
+        "id": "business-and-partnership-inquiries",
+        "title": "Business and Partnership Inquiries",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Visitors may contact Go Technologies regarding technology collaboration, strategic partnerships, business development, and other professional opportunities."
+          },
+          {
+            "type": "paragraph",
+            "text": "Submitting an inquiry does not create a contractual relationship, agency, employment, partnership, or other legally binding arrangement."
+          },
+          {
+            "type": "paragraph",
+            "text": "Any formal commercial engagement will be subject to separately agreed terms."
+          },
+          {
+            "type": "paragraph",
+            "text": "Unless a separate confidentiality agreement is in place, please avoid submitting confidential business information, proprietary technology, or sensitive personal information through general website contact channels."
+          }
+        ]
+      },
+      {
+        "id": "external-links",
+        "title": "External Links",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Our website may contain links to other websites and digital services."
+          },
+          {
+            "type": "paragraph",
+            "text": "These links are provided for convenience and informational purposes."
+          },
+          {
+            "type": "paragraph",
+            "text": "Unless expressly stated, we do not control, endorse, or assume responsibility for independently operated external websites, their content, or their policies."
+          },
+          {
+            "type": "paragraph",
+            "text": "Accessing third-party services is at your discretion and subject to their applicable terms."
+          }
+        ]
+      },
+      {
+        "id": "website-availability",
+        "title": "Website Availability",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We aim to maintain a reliable and accessible website."
+          },
+          {
+            "type": "paragraph",
+            "text": "However, website availability may occasionally be affected by maintenance, technical issues, updates, or circumstances beyond our reasonable control."
+          },
+          {
+            "type": "paragraph",
+            "text": "We do not guarantee uninterrupted access or error-free operation."
+          }
+        ]
+      },
+      {
+        "id": "disclaimer-and-limitation-of-liability",
+        "title": "Disclaimer and Limitation of Liability",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The corporate website and its content are provided for general informational purposes."
+          },
+          {
+            "type": "paragraph",
+            "text": "To the extent permitted by applicable law, Go Technologies does not make guarantees regarding the completeness, uninterrupted availability, or suitability of website content for any particular purpose."
+          },
+          {
+            "type": "paragraph",
+            "text": "To the extent permitted by applicable law, Go Technologies will not be liable for indirect or consequential losses arising from reliance on general website information or temporary website unavailability."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nothing in these Terms excludes or limits liability that cannot lawfully be excluded or restricted."
+          }
+        ]
+      },
+      {
+        "id": "privacy-and-cookies",
+        "title": "Privacy and Cookies",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Our collection and handling of personal information are described in our Privacy Notice."
+          },
+          {
+            "type": "paragraph",
+            "text": "Information about the use of cookies and similar technologies is provided in our Cookie Policy."
+          },
+          {
+            "type": "paragraph",
+            "text": "By using this website, you acknowledge that these separate notices are available for your review. Where applicable law requires consent for particular processing activities, that consent will be requested separately."
+          }
+        ]
+      },
+      {
+        "id": "changes-to-these-terms",
+        "title": "Changes to These Terms",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We may revise these Website Terms to reflect changes in our business, website functionality, or legal requirements."
+          },
+          {
+            "type": "paragraph",
+            "text": "Updated Terms will be published on this website together with the revised date."
+          },
+          {
+            "type": "paragraph",
+            "text": "Continued use of the website after updated Terms take effect constitutes acceptance to the extent permitted by applicable law."
+          }
+        ]
+      },
+      {
+        "id": "governing-law",
+        "title": "Governing Law",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "These Terms are governed by the applicable laws of Sri Lanka."
+          },
+          {
+            "type": "paragraph",
+            "text": "Subject to applicable mandatory legal rights and jurisdictional requirements, disputes relating to these Terms will fall within the jurisdiction of the competent courts of Sri Lanka."
+          }
+        ]
+      },
+      {
+        "id": "contact-information",
+        "title": "Contact Information",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "For questions concerning these Website Terms, please contact:"
+          },
+          {
+            "type": "contact",
+            "lines": [
+              "Go Technologies",
+              "Sri Lanka",
+              "Email: hello@gotechnologies.lk",
+              "Website: https://gotechnologies.lk",
+              "Legal entity: Go Technologies (Private) Limited"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "updated": "13 October 2026",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This Cookie Policy explains how Go Technologies (\"we\", \"us\", or \"our\") uses cookies and similar technologies on its corporate website at https://gotechnologies.lk."
+          },
+          {
+            "type": "paragraph",
+            "text": "It describes what cookies are, why they may be used, and how visitors can manage their preferences."
+          },
+          {
+            "type": "paragraph",
+            "text": "This policy should be read together with our Privacy Notice."
+          }
+        ]
+      },
+      {
+        "id": "what-are-cookies",
+        "title": "What Are Cookies?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Cookies are small text files that websites may store on your device when you visit them."
+          },
+          {
+            "type": "paragraph",
+            "text": "They can help websites remember certain preferences, operate securely, measure performance, and understand how visitors interact with content."
+          },
+          {
+            "type": "paragraph",
+            "text": "Websites may also use similar technologies, including browser storage and analytics identifiers, for related purposes."
+          }
+        ]
+      },
+      {
+        "id": "types-of-cookies-we-may-use",
+        "title": "Types of Cookies We May Use",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The cookies used on our website depend on the features and third-party services enabled."
+          },
+          {
+            "type": "heading",
+            "text": "3.1 Strictly Necessary Cookies"
+          },
+          {
+            "type": "paragraph",
+            "text": "These cookies support essential website operations, such as:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Security and protection against misuse.",
+              "Maintaining necessary website functionality.",
+              "Remembering applicable privacy or cookie preferences.",
+              "Supporting essential technical operations."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Certain essential technologies may operate without consent where permitted by applicable law."
+          },
+          {
+            "type": "heading",
+            "text": "3.2 Analytics and Performance Cookies"
+          },
+          {
+            "type": "paragraph",
+            "text": "Where enabled, analytics technologies help us understand how visitors interact with the website."
+          },
+          {
+            "type": "paragraph",
+            "text": "They may collect information such as:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Pages viewed and navigation patterns.",
+              "Approximate visit duration.",
+              "Browser and device information.",
+              "General geographic or referral information.",
+              "Website performance and usage trends."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "We may use Google Analytics 4 or another analytics provider for these purposes."
+          },
+          {
+            "type": "paragraph",
+            "text": "Where required by applicable law, analytics technologies will only be enabled after appropriate consent."
+          },
+          {
+            "type": "heading",
+            "text": "3.3 Functional Cookies"
+          },
+          {
+            "type": "paragraph",
+            "text": "Functional cookies may be used to remember preferences or support optional website features."
+          },
+          {
+            "type": "paragraph",
+            "text": "Depending on the functionality implemented, these may include language preferences or other user experience settings."
+          },
+          {
+            "type": "heading",
+            "text": "3.4 Marketing Cookies"
+          },
+          {
+            "type": "paragraph",
+            "text": "If marketing or advertising technologies are introduced in the future, they may be used to measure campaign effectiveness or support relevant promotional communications."
+          },
+          {
+            "type": "paragraph",
+            "text": "Such technologies will be described in this policy and will be subject to applicable consent requirements before being used."
+          },
+          {
+            "type": "paragraph",
+            "text": "The presence of this section does not mean that marketing cookies are currently active."
+          }
+        ]
+      },
+      {
+        "id": "first-party-and-third-party-cookies",
+        "title": "First-Party and Third-Party Cookies",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "First-party cookies are set by the website you are visiting."
+          },
+          {
+            "type": "paragraph",
+            "text": "Third-party cookies may be set by external service providers whose tools or functionality are integrated into the website."
+          },
+          {
+            "type": "paragraph",
+            "text": "Where applicable, these providers may include website analytics, hosting, security, or embedded-content services."
+          },
+          {
+            "type": "paragraph",
+            "text": "Third-party providers may process information under their respective privacy policies and contractual arrangements."
+          }
+        ]
+      },
+      {
+        "id": "cookie-duration",
+        "title": "Cookie Duration",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Cookies may be:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Session cookies: Temporary cookies that generally expire when the relevant browser session ends."
+          },
+          {
+            "type": "paragraph",
+            "text": "Persistent cookies: Cookies that remain on your device for a defined period or until removed."
+          },
+          {
+            "type": "paragraph",
+            "text": "The actual duration depends on the purpose and configuration of each cookie."
+          }
+        ]
+      },
+      {
+        "id": "managing-your-cookie-preferences",
+        "title": "Managing Your Cookie Preferences",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Where optional cookies requiring consent are used, we will provide an appropriate method for visitors to make their choices."
+          },
+          {
+            "type": "paragraph",
+            "text": "Where available, you may change or withdraw your consent through the website's cookie preference settings."
+          },
+          {
+            "type": "paragraph",
+            "text": "You can also manage or delete cookies using your browser settings."
+          },
+          {
+            "type": "paragraph",
+            "text": "Disabling certain cookies may affect some website features or preferences."
+          }
+        ]
+      },
+      {
+        "id": "google-analytics",
+        "title": "Google Analytics",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "If Google Analytics is enabled, it may be used to understand website visits, traffic sources, user interactions, and general usage patterns."
+          },
+          {
+            "type": "paragraph",
+            "text": "Information processed through the analytics service may be handled by Google in accordance with its applicable terms and privacy practices."
+          },
+          {
+            "type": "paragraph",
+            "text": "Where required, analytics consent will be obtained before analytics cookies or related technologies are activated."
+          },
+          {
+            "type": "paragraph",
+            "text": "For further information about Google's data practices, visit: https://policies.google.com/privacy"
+          }
+        ]
+      },
+      {
+        "id": "changes-to-this-cookie-policy",
+        "title": "Changes to This Cookie Policy",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "We may update this Cookie Policy when website functionality, third-party integrations, or applicable legal requirements change."
+          },
+          {
+            "type": "paragraph",
+            "text": "The latest version will be published on this website with an updated date."
+          }
+        ]
+      },
+      {
+        "id": "contact-us",
+        "title": "Contact Us",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "If you have any questions about the use of cookies on our website, please contact:"
+          },
+          {
+            "type": "contact",
+            "lines": [
+              "Go Technologies",
+              "Email: hello@gotechnologies.lk",
+              "Website: https://gotechnologies.lk"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

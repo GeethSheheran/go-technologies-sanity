@@ -1,0 +1,110 @@
+/* Shared type roles. Keep this after layout styles so section breakpoints cannot
+   introduce their own heading scales. The hero and its reveal remain display type. */
+:root {
+  --type-section: clamp(2rem, 3.4vw, 3rem);
+  --type-subheading: clamp(1.375rem, 1.8vw, 1.5rem);
+  --type-body: clamp(0.875rem, 1.1vw, 0.9375rem);
+  --type-label: 0.6875rem;
+}
+
+.about-title,
+.product-story-heading h2,
+.journey-explorer-heading h3,
+.principles-summary h2,
+.vision-heading-group h2,
+.partners-heading h2,
+.audience-router > h2,
+.closing-heading h2 {
+  font-family: var(--font-dm), sans-serif;
+  font-size: var(--type-section);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.product-story-audiences h3,
+.principle-row h3,
+.partner-row h3,
+.journey-options [role="tab"] {
+  font-family: var(--font-dm), sans-serif;
+  font-size: var(--type-subheading);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.product-story-heading p,
+.principles-summary > p,
+.vision-signature,
+.vision-lead,
+.about-signature > p,
+.body-copy p,
+.product-story-audiences p,
+.principle-row p,
+.vision-body p,
+.partners-heading > p,
+.partner-row p,
+.audience-link p,
+.closing-copy p,
+.closing-copy > span {
+  font-family: var(--font-dm), sans-serif;
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+
+.section-label,
+.eyebrow,
+.audience-link h3,
+.footer-column-title {
+  font-family: var(--font-dm), sans-serif;
+  font-size: var(--type-label);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.action,
+.hero-support .action,
+.audience-action {
+  font-size: var(--type-label);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+/* A restrained display scale keeps the opening proportional to the sections. */
+.hero h1 {
+  font-size: clamp(2.5rem, 10.2vw, 4rem);
+}
+.hero-support h2 {
+  font-family: var(--font-dm), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+.hero-support p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero h1 {
+    font-size: clamp(3.125rem, 9vw, 4.875rem);
+  }
+}
+@media (min-width: 901px) {
+  .hero h1 {
+    font-size: clamp(3.5rem, 6.8cqi, 7rem);
+  }
+  .hero-period-arrow {
+    width: 64px;
+    height: 64px;
+    margin-left: 28px;
+  }
+  .hero-period-arrow .arrow {
+    width: 32px;
+    height: 32px;
+  }
+}
