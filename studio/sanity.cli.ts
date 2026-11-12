@@ -1,6 +1,11 @@
 import {defineCliConfig} from 'sanity/cli'
 
 export default defineCliConfig({
+  // Matches the public Studio mount in the root vercel.json. The workspace
+  // basePath stays at / so the CLI prefix is applied exactly once.
+  project: {
+    basePath: '/studio',
+  },
   api: {
     projectId: 'pk1w379x',
     dataset: 'production'
