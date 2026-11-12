@@ -3,7 +3,7 @@
 ## Sanity CMS
 
 The standalone Studio is in `studio/`, connected to project `pk1w379x`, dataset
-`production`. Run `npm run studio` and open http://localhost:3333. Website preview:
+`production`. Run `npm run studio` and open http://localhost:3333/studio. Website preview:
 `npm run dev`, then http://localhost:3000. The migrated content is available under
 **Website Content → Home Page → Hero** and the other section names.
 
@@ -95,3 +95,10 @@ The legal routes preserve the supplied approved text. Search-engine indexing rem
 - Fonts: [Cal Sans](https://fonts.google.com/specimen/Cal+Sans), [DM Sans](https://fonts.google.com/specimen/DM+Sans).
 
 Original assets remain backed up in `public/`. In CMS mode, editable photos load from the Sanity image CDN; fonts and structural assets remain local. `scripts/prepare-assets.mjs <source-directory>` is an optional utility for the GO aperture and favicon. It expects `identity-003.png` (the PDF's extracted alpha mask). The supplied wordmark exports are used unchanged. The old reconstructed corporate wordmarks and unused road, hill and vehicle mockup images have been removed.
+
+## Vercel services
+
+The proposed [Vercel services configuration](vercel.json) builds the website and
+Studio independently, routing the website at `/` and Studio at `/studio`.
+Names and routing are pending owner confirmation. See [setup and verification
+instructions](docs/vercel-services.md). No deployment has been performed.

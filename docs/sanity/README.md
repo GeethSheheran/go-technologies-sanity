@@ -2,7 +2,7 @@
 
 ## Open the editor
 
-On this computer open http://localhost:3333 and sign in with your existing
+On this computer open http://localhost:3333/studio and sign in with your existing
 Sanity account. If it is not running, run `npm run studio` from the repository
 root. This is the content editor. Sanity's account home is a different screen.
 A hosted Studio has not been deployed yet.
