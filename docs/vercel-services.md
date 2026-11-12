@@ -12,16 +12,17 @@ queries Sanity Content Lake at build time; the Studio browser application talks
 to Sanity directly. Studio is an editor, not the content API for the app. A
 runtime binding would not work for this static build, nor is one needed.
 
-The Studio rewrite's `destination.path` removes `/studio` for service route/file
-lookup. The original browser request path remains unchanged. The Sanity CLI's
-`project.basePath` sets both its browser router and built asset URLs to `/studio`.
-The workspace basePath stays at its default to avoid doubling that prefix.
-Specific Studio rules precede the app catch-all; `/studio-other` still goes to app.
+The Studio receives the original `/studio` path. Its `build:vercel` script emits
+an explicit Build Output API tree with files under `static/studio/`. The Sanity
+CLI base path matches these URLs. Existing files are served first; missing assets
+return 404; only editor navigation uses the HTML fallback. See the
+[asset-routing fix report](sanity/vercel-studio-fix.md).
 
 Separate `npm ci` commands use each service's own lockfile. The app retains
-Next.js static export. Studio outputs `dist/`. No runtime API, middleware or
-frontend service-to-service URL replacement is needed. Studio imports the shared
-CMS JSON files in `src/sanity`; keep the whole repository available to its build.
+Next.js static export. Studio's `dist/` is packaged into `.vercel/output/` and is
+not deployed directly with the Sanity preset's generic SPA fallback. No internal
+bindings are needed. Studio imports shared CMS JSON files in `src/sanity`; keep
+the whole repository available to its build.
 
 ## Before deployment
 

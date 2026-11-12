@@ -11,18 +11,18 @@
       "root": "studio",
       "framework": "sanity",
       "installCommand": "npm ci",
-      "buildCommand": "npm run build",
-      "outputDirectory": "dist"
+      "buildCommand": "npm run build:vercel",
+      "devCommand": "npm run dev -- --port $PORT"
     }
   },
   "rewrites": [
     {
       "source": "/studio",
-      "destination": { "service": "studio", "path": "/" }
+      "destination": { "service": "studio" }
     },
     {
       "source": "/studio/:path*",
-      "destination": { "service": "studio", "path": "/:path*" }
+      "destination": { "service": "studio" }
     },
     {
       "source": "/(.*)",
