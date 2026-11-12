@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cloudflare": "SANITY_CONTENT_ENABLED=true npm run build && npm --prefix studio ci && npm --prefix studio run build:vercel && node scripts/package-cloudflare.mjs",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
