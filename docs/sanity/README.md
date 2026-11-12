@@ -96,3 +96,13 @@ The initial migration used dotted document IDs, which Sanity makes private to
 unauthenticated requests. These copies remain untouched. The editing menu and
 website use only the final `website-...` IDs. No pre-existing documents were
 deleted. See Sanity's [document access rules](https://www.sanity.io/docs/content-lake/keeping-your-data-safe).
+
+## Shared connection configuration
+
+Website, Studio and Studio CLI now read `src/sanity/project.json` for the same
+project and dataset. Legacy `NEXT_PUBLIC_SANITY_*` deployment variables cannot
+redirect the website to a different dataset. Website queries use anonymous
+published-content access to the verified public dataset and do not attach
+`SANITY_API_READ_TOKEN`. Changing to a private dataset requires an explicit
+server-side authentication change; do not assume setting a token enables it.
+The `SANITY_CONTENT_ENABLED` activation switch still applies.

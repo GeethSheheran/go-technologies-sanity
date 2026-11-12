@@ -34,11 +34,25 @@ function images(value) {
 docs.forEach(images);
 let response = docs;
 const exports = {};
-const mockEnv = { SANITY_CONTENT_ENABLED: "true" };
+const mockEnv = {
+  SANITY_CONTENT_ENABLED: "true",
+  NEXT_PUBLIC_SANITY_PROJECT_ID: "different-project",
+  NEXT_PUBLIC_SANITY_DATASET: "different-dataset",
+  SANITY_API_READ_TOKEN: "test-token-must-not-be-attached",
+};
+const project = JSON.parse(fs.readFileSync("src/sanity/project.json", "utf8"));
 const dependencies = {
   "server-only": {},
   react: { cache: (fn) => fn },
-  "@sanity/client": { createClient: () => ({ fetch: async () => response }) },
+  "@sanity/client": {
+    createClient: (config) => {
+      assert.equal(config.projectId, project.projectId);
+      assert.equal(config.dataset, project.dataset);
+      assert.equal(config.perspective, "published");
+      assert.equal(config.token, undefined);
+      return { fetch: async () => response };
+    },
+  },
   "@sanity/image-url": {
     createImageUrlBuilder: () => ({
       image: () => ({ auto: () => ({ url: () => "/verified-image.webp" }) }),
@@ -46,6 +60,7 @@ const dependencies = {
   },
   "../original.json": original,
   "../catalog.json": catalog,
+  "../project.json": project,
 };
 vm.runInNewContext(
   ts.transpileModule(fs.readFileSync("src/sanity/lib/content.ts", "utf8"), {

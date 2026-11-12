@@ -4,16 +4,16 @@ import { createClient } from "@sanity/client";
 import { createImageUrlBuilder } from "@sanity/image-url";
 import original from "../original.json";
 import catalog from "../catalog.json";
+import project from "../project.json";
 
 export type WebsiteContent = typeof original;
 export type ContentProps = { content: WebsiteContent };
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "pk1w379x",
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  apiVersion: "2025-02-19",
+  ...project,
   useCdn: false,
   perspective: "published",
-  token: process.env.SANITY_API_READ_TOKEN,
+  // This verified dataset is public. Do not attach deployment tokens, whose
+  // permissions can differ from anonymous published-content access.
 });
 const images = createImageUrlBuilder(client);
 const legalBlockExamples: Record<string, unknown>[] = [];
@@ -82,7 +82,7 @@ export const getContent = cache(async (): Promise<WebsiteContent> => {
     const doc = docs.find((d) => d._id === entry.id);
     if (!doc)
       throw Error(
-        `Published Sanity document missing: ${entry.id}. Restore it before building.`,
+        `Published Sanity document missing: ${entry.id} in ${project.projectId}/${project.dataset}. Check publication state and the shared CMS connection; no content was changed.`,
       );
     const target = entry.path
       .slice(0, -1)

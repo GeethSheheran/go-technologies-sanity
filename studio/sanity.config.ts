@@ -2,12 +2,13 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {schemaTypes} from './schemaTypes'
 import catalog from '../src/sanity/catalog.json'
+import project from '../src/sanity/project.json'
 
 export default defineConfig({
   name: 'default',
   title: 'Go Technologies',
-  projectId: 'pk1w379x',
-  dataset: 'production',
+  projectId: project.projectId,
+  dataset: project.dataset,
   plugins: [
     structureTool({
       structure: (S) =>

@@ -1,4 +1,5 @@
 import {defineCliConfig} from 'sanity/cli'
+import project from '../src/sanity/project.json'
 
 export default defineCliConfig({
   // Matches the public Studio mount in the root vercel.json. The workspace
@@ -7,8 +8,8 @@ export default defineCliConfig({
     basePath: '/studio',
   },
   api: {
-    projectId: 'pk1w379x',
-    dataset: 'production'
+    projectId: project.projectId,
+    dataset: project.dataset,
   },
   deployment: {
     /**
