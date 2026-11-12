@@ -1,6 +1,9 @@
-import { copy, destinations } from "@/lib/content";
+import type { ContentProps } from "@/sanity/types";
 import { Action, Arrow } from "./brand";
-export function Partnerships() {
+export function Partnerships({ content }: ContentProps) {
+  const { copy } = content;
+  const { destinations } = content.settings;
+
   return (
     <section
       className="partnerships section-space"
@@ -10,7 +13,7 @@ export function Partnerships() {
       <div className="container">
         <div className="section-label">
           <span className="dot" />
-          Partnerships
+          {content.settings.labels.partnerships}
         </div>
         <div className="partners-grid">
           <div className="partners-heading" data-reveal>

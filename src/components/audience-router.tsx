@@ -1,9 +1,11 @@
 "use client";
 import { motion, useReducedMotion } from "framer-motion";
-import { copy } from "@/lib/content";
+import type { ContentProps } from "@/sanity/types";
 import { Arrow } from "./brand";
 import { AudienceAvatar } from "./audience-avatar";
-export function AudienceRouter() {
+export function AudienceRouter({ content }: ContentProps) {
+  const { copy } = content;
+
   const reduced = useReducedMotion();
   return (
     <section
@@ -14,9 +16,9 @@ export function AudienceRouter() {
         {copy.router.title}
       </h2>
       <div className="audience-links">
-        {copy.router.items.map((item, index) => (
-          <div className="audience-item" key={item.title}>
-            <AudienceAvatar variant={index} />
+        {copy.router.items.map((item) => (
+          <div className="audience-item" key={item.variant}>
+            <AudienceAvatar variant={item.variant} />
             <motion.a
               className="audience-link"
               tabIndex={0}

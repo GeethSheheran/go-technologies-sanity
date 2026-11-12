@@ -2,17 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import type { ContentProps } from "@/sanity/types";
 import { Brand, Arrow } from "./brand";
 
-const links = [
-  ["Home", "#home"],
-  ["About", "#about"],
-  ["GoChauffeur", "#gochauffeur"],
-  ["Partnerships", "#partnerships"],
-  ["Contact", "#contact"],
-];
-
-export function Header({ homePath = "" }: { homePath?: string }) {
+export function Header({
+  content,
+  homePath = "",
+}: ContentProps & { homePath?: string }) {
+  const links = content.settings.navigation;
   const [open, setOpen] = useState(false);
   const reduced = useReducedMotion();
   const menuRef = useRef<HTMLDivElement>(null);
@@ -81,8 +78,11 @@ export function Header({ homePath = "" }: { homePath?: string }) {
           <Brand />
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
-          {links.map(([label, href]) => (
-            <a key={href} href={`${homePath}${href}`}>
+          {links.map(({ label, href }) => (
+            <a
+              key={href}
+              href={`${href.startsWith("#") ? homePath : ""}${href}`}
+            >
               {label}
             </a>
           ))}
@@ -118,9 +118,9 @@ export function Header({ homePath = "" }: { homePath?: string }) {
             transition={{ duration: 0.2 }}
           >
             <nav aria-label="Mobile navigation">
-              {links.map(([label, href], i) => (
+              {links.map(({ label, href }, i) => (
                 <motion.a
-                  href={`${homePath}${href}`}
+                  href={`${href.startsWith("#") ? homePath : ""}${href}`}
                   key={href}
                   initial={{ opacity: 0, x: reduced ? 0 : -12 }}
                   animate={{ opacity: 1, x: 0 }}

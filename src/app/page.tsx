@@ -1,3 +1,4 @@
+import { getContent } from "@/sanity/lib/content";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
@@ -12,7 +13,8 @@ import { BrandSplash } from "@/components/brand-splash";
 import { SplashLogo } from "@/components/splash-logo";
 import { CookieNotice } from "@/components/cookie-notice";
 
-export default function Home() {
+export default async function Home() {
+  const content = await getContent();
   return (
     <>
       <BrandSplash>
@@ -20,20 +22,20 @@ export default function Home() {
       </BrandSplash>
       <div id="site-content">
         <a className="skip-link" href="#main">
-          Skip to content
+          {content.settings.labels.skip}
         </a>
-        <Header />
+        <Header content={content} />
         <main id="main">
-          <Hero />
-          <About />
-          <Product />
-          <Principles />
-          <Vision />
-          <Partnerships />
-          <AudienceRouter />
+          <Hero content={content} />
+          <About content={content} />
+          <Product content={content} />
+          <Principles content={content} />
+          <Vision content={content} />
+          <Partnerships content={content} />
+          <AudienceRouter content={content} />
         </main>
-        <Footer />
-        <CookieNotice />
+        <Footer content={content} />
+        <CookieNotice content={content} />
       </div>
       <MotionSystem />
     </>

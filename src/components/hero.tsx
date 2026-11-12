@@ -1,18 +1,22 @@
 import { JourneyWorld } from "./journey-world";
-import { copy } from "@/lib/content";
+import type { ContentProps } from "@/sanity/types";
 import { Action, Arrow } from "./brand";
 
-export function Hero() {
+export function Hero({ content }: ContentProps) {
+  const { copy } = content;
+
+  const words = copy.hero.title.slice(0, -3).trimEnd().split(" ");
+  const secondLine = words.pop();
   return (
     <section className="hero" id="home" aria-labelledby="hero-heading">
       <div className="hero-top container">
         <h1 id="hero-heading" aria-label={copy.hero.title}>
           <span className="hero-line" aria-hidden="true">
-            <span>Everything begins </span>
+            <span>{words.join(" ")} </span>
           </span>
           <span className="hero-line" aria-hidden="true">
             <span>
-              with <em>Go.</em>
+              {secondLine} <em>Go.</em>
               <span className="hero-period-arrow">
                 <Arrow diagonal />
               </span>
@@ -22,7 +26,9 @@ export function Hero() {
         <div className="hero-support">
           <h2>{copy.hero.subtitle}</h2>
           <p>{copy.hero.body}</p>
-          <Action href="#gochauffeur">{copy.actions.explore}</Action>
+          <Action href={content.settings.destinations.heroExplore}>
+            {copy.actions.explore}
+          </Action>
         </div>
       </div>
       <div className="hero-visual-wrap container">
@@ -73,7 +79,7 @@ export function Hero() {
         </div>
         <div className="hero-baseline">
           <span>{copy.hero.signature}</span>
-          <a href="#about">
+          <a href={content.settings.destinations.discover}>
             {copy.actions.discover}
             <Arrow />
           </a>

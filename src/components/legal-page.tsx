@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { legalDocuments, legalLinks, type LegalSlug } from "@/lib/legal";
+import { getContent } from "@/sanity/lib/content";
+import type { LegalDocument } from "@/lib/legal";
+import { legalLinks, type LegalSlug } from "@/lib/legal";
 import styles from "./legal-page.module.css";
 
 // Make the document's references actionable without changing its wording.
@@ -27,20 +29,24 @@ function LegalText({ text, slug }: { text: string; slug: LegalSlug }) {
     );
 }
 
-export function LegalPage({ slug }: { slug: LegalSlug }) {
-  const document = legalDocuments[slug];
+export async function LegalPage({ slug }: { slug: LegalSlug }) {
+  const content = await getContent();
+  const document = content.legal[slug] as LegalDocument & {
+    updatedIso: string;
+  };
   return (
     <>
       <div className={styles.hero}>
         <div className="container">
           <p className="section-label">
             <span className="dot" aria-hidden="true" />
-            Legal
+            {content.settings.labels.legal}
           </p>
           <div className={styles.heading}>
             <h1>{document.title}</h1>
             <p>
-              Last updated <time dateTime="2026-10-13">{document.updated}</time>
+              {content.settings.labels.updated}{" "}
+              <time dateTime={document.updatedIso}>{document.updated}</time>
             </p>
           </div>
           <nav className={styles.policies} aria-label="Legal pages">

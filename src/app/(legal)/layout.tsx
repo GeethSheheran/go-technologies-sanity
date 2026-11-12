@@ -1,21 +1,23 @@
+import { getContent } from "@/sanity/lib/content";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
-export default function LegalLayout({
+export default async function LegalLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const content = await getContent();
   return (
     <div id="top">
       <a className="skip-link" href="#main">
-        Skip to content
+        {content.settings.labels.skip}
       </a>
-      <Header homePath="/" />
+      <Header content={content} homePath="/" />
       <main id="main" tabIndex={-1}>
         {children}
       </main>
-      <Footer homePath="/" compact />
+      <Footer content={content} homePath="/" compact />
     </div>
   );
 }

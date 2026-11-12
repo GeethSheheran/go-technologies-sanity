@@ -1,7 +1,9 @@
-import { copy } from "@/lib/content";
+import type { ContentProps } from "@/sanity/types";
 import { GoMark } from "./brand";
 
-export function Principles() {
+export function Principles({ content }: ContentProps) {
+  const { copy } = content;
+
   return (
     <section className="principles-story" aria-labelledby="principles-heading">
       <div className="principles-layout container">

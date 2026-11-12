@@ -1,13 +1,16 @@
-import { copy, destinations } from "@/lib/content";
+import type { ContentProps } from "@/sanity/types";
 import Link from "next/link";
 import { Action, Arrow, Brand } from "./brand";
 export function Footer({
+  content,
   homePath = "",
   compact = false,
-}: {
+}: ContentProps & {
   homePath?: string;
   compact?: boolean;
 }) {
+  const { copy, settings } = content;
+  const { destinations } = settings;
   return (
     <footer
       className={`site-footer${compact ? " site-footer--compact" : ""}`}
@@ -36,30 +39,30 @@ export function Footer({
             <Brand light />
             <p>{copy.hero.title}</p>
           </div>
-          <div>
-            <span className="footer-column-title">PRODUCT</span>
-            <a href={`${homePath}#gochauffeur`}>GoChauffeur</a>
-            <a href={`${homePath}#journeys`}>Explore GoChauffeur</a>
-            <a href={`${homePath}#chauffeurs`}>Register as a Chauffeur</a>
-          </div>
-          <div>
-            <span className="footer-column-title">COMPANY</span>
-            <a href={`${homePath}#about`}>About</a>
-            <a href={`${homePath}#partnerships`}>Partnerships</a>
-            <a href={destinations.contact}>Contact</a>
-          </div>
-          <div>
-            <span className="footer-column-title">LEGAL</span>
-            <Link href="/privacy">Privacy Notice</Link>
-            <Link href="/terms">Website Terms</Link>
-            <Link href="/cookies">Cookie Policy</Link>
-          </div>
+          {settings.footerColumns.map((column) => (
+            <div key={column.title}>
+              <span className="footer-column-title">{column.title}</span>
+              {column.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={
+                    link.href.startsWith("#")
+                      ? `${homePath}${link.href}`
+                      : link.href
+                  }
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ))}
         </div>
         <div className="footer-baseline">
           <div className="footer-credits">
-            <span>© 2026 Go Technologies. All rights reserved.</span>
+            <span>{settings.copyright}</span>
             <span>
-              Developed by <a href="https://www.tourithm.lk/">Tourithm.lk</a>
+              {settings.creditPrefix}{" "}
+              <a href={settings.creditHref}>{settings.creditLabel}</a>
             </span>
           </div>
           <a href={compact ? "#top" : "#home"} aria-label="Back to top">

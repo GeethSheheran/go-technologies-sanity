@@ -1,6 +1,8 @@
-import { copy } from "@/lib/content";
+import type { ContentProps } from "@/sanity/types";
 
-export function About() {
+export function About({ content }: ContentProps) {
+  const { copy } = content;
+
   return (
     <>
       <section
@@ -10,7 +12,7 @@ export function About() {
       >
         <div className="section-label">
           <span className="dot" />
-          About
+          {content.settings.labels.about}
         </div>
         <div className="about-content">
           <h2

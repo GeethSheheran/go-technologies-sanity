@@ -1,6 +1,21 @@
 # Go Technologies — corporate frontend
 
-Next.js App Router frontend for Mr. Akeel, based on the supplied Go Technologies brand direction and client website content. Frontend review only: no CMS, booking engine, registration database, tracking, or form backend is connected.
+## Sanity CMS
+
+The standalone Studio is in `studio/`, connected to project `pk1w379x`, dataset
+`production`. Run `npm run studio` and open http://localhost:3333. Website preview:
+`npm run dev`, then http://localhost:3000. The migrated content is available under
+**Website Content → Home Page → Hero** and the other section names.
+
+See [editing and developer instructions](docs/sanity/README.md),
+[content mapping](docs/sanity/content-map.md), and the
+[migration verification report](docs/sanity/migration-report.json).
+
+Local CMS mode is enabled through ignored `.env.local`. Production deployment
+and automatic publishing have not been activated. Run `npm run check:cms` for
+content-preservation and mapper checks; the historical PDF check remains intact.
+
+Next.js App Router frontend for Mr. Akeel, based on the supplied Go Technologies brand direction and client website content. Sanity content editing is integrated locally. No booking engine, registration database, tracking, or form backend is added.
 
 ## Run
 
@@ -66,7 +81,7 @@ Most page content remains in Server Components. Client boundaries are limited to
 
 Current navigation routes to sections on the corporate page. Product discovery stays inside the frontend, while enquiry links open email drafts to `hello@gotechnologies.lk` (the contact address on the existing corporate website). No email is sent by the application. Replace destinations in `src/lib/content.ts` when the client confirms the product and registration URLs.
 
-The footer preserves the supplied legal-page labels as text. Legal routes are intentionally not populated with invented policy language; client/counsel-approved copy is still needed. Search-engine indexing is disabled for this review build. Sanity integration and production deployment are subsequent work.
+The legal routes preserve the supplied approved text. Search-engine indexing remains disabled. CMS production deployment and automatic publishing remain pending.
 
 ## Asset provenance
 
@@ -79,4 +94,4 @@ The footer preserves the supplied legal-page labels as text. Legal routes are in
 - Coast: [Tangalle Beach, Pexels](https://www.pexels.com/photo/tangalle-beach-sri-lanka-drone-view-16508233/).
 - Fonts: [Cal Sans](https://fonts.google.com/specimen/Cal+Sans), [DM Sans](https://fonts.google.com/specimen/DM+Sans).
 
-All runtime assets are checked into `public/`; no external image or font request is needed during normal rendering. `scripts/prepare-assets.mjs <source-directory>` is an optional utility for the GO aperture and favicon. It expects `identity-003.png` (the PDF's extracted alpha mask). The supplied wordmark exports are used unchanged. The old reconstructed corporate wordmarks and unused road, hill and vehicle mockup images have been removed.
+Original assets remain backed up in `public/`. In CMS mode, editable photos load from the Sanity image CDN; fonts and structural assets remain local. `scripts/prepare-assets.mjs <source-directory>` is an optional utility for the GO aperture and favicon. It expects `identity-003.png` (the PDF's extracted alpha mask). The supplied wordmark exports are used unchanged. The old reconstructed corporate wordmarks and unused road, hill and vehicle mockup images have been removed.

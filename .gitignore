@@ -4,3 +4,5 @@ out/
 .wrangler/
 *.tsbuildinfo
 .DS_Store
+.env*
+!.env.example

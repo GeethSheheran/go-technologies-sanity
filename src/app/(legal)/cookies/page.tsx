@@ -1,7 +1,10 @@
 import { LegalPage } from "@/components/legal-page";
-import { legalMetadata } from "@/lib/legal";
+import { getContent } from "@/sanity/lib/content";
+import type { Metadata } from "next";
 
-export const metadata = legalMetadata("cookies");
+export async function generateMetadata(): Promise<Metadata> {
+  return (await getContent()).legal.cookies.seo as Metadata;
+}
 export default function CookiesPage() {
   return <LegalPage slug="cookies" />;
 }

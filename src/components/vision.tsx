@@ -1,6 +1,8 @@
-import { copy } from "@/lib/content";
+import type { ContentProps } from "@/sanity/types";
 
-export function Vision() {
+export function Vision({ content }: ContentProps) {
+  const { copy } = content;
+
   return (
     <section className="vision-story" aria-labelledby="vision-heading">
       <div className="vision-layout container">

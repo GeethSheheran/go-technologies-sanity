@@ -1,0 +1,80 @@
+[
+  {
+    "id": "website-hero",
+    "type": "hero",
+    "title": "Home Page",
+    "path": ["copy", "hero"]
+  },
+  {
+    "id": "website-product",
+    "type": "product",
+    "title": "GoChauffeur",
+    "path": ["copy", "product"]
+  },
+  {
+    "id": "website-about",
+    "type": "about",
+    "title": "About",
+    "path": ["copy", "about"]
+  },
+  {
+    "id": "website-vision",
+    "type": "vision",
+    "title": "Vision",
+    "path": ["copy", "vision"]
+  },
+  {
+    "id": "website-principles",
+    "type": "principles",
+    "title": "Principles",
+    "path": ["copy", "principles"]
+  },
+  {
+    "id": "website-partnerships",
+    "type": "partnerships",
+    "title": "Partnerships",
+    "path": ["copy", "partnerships"]
+  },
+  {
+    "id": "website-router",
+    "type": "router",
+    "title": "Audience Navigation",
+    "path": ["copy", "router"]
+  },
+  {
+    "id": "website-closing",
+    "type": "closing",
+    "title": "Closing Section",
+    "path": ["copy", "closing"]
+  },
+  {
+    "id": "website-settings",
+    "type": "settings",
+    "title": "Footer & Contact",
+    "path": ["settings"]
+  },
+  {
+    "id": "website-seo",
+    "type": "seo",
+    "title": "SEO & Website Settings",
+    "path": ["seo"]
+  },
+  {
+    "id": "website-legal-privacy",
+    "type": "legalPrivacy",
+    "title": "Privacy Notice",
+    "path": ["legal", "privacy"]
+  },
+  {
+    "id": "website-legal-terms",
+    "type": "legalTerms",
+    "title": "Website Terms",
+    "path": ["legal", "terms"]
+  },
+  {
+    "id": "website-legal-cookies",
+    "type": "legalCookies",
+    "title": "Cookie Policy",
+    "path": ["legal", "cookies"]
+  }
+]

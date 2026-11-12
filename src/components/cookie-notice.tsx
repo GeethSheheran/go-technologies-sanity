@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import Link from "next/link";
+import type { ContentProps } from "@/sanity/types";
 import styles from "./cookie-notice.module.css";
 
 const storageKey = "gotech:cookie-notice:v1";
@@ -32,7 +33,8 @@ function isVisible() {
 
 const serverSnapshot = () => false;
 
-export function CookieNotice() {
+export function CookieNotice({ content }: ContentProps) {
+  const notice = content.settings.cookie;
   const visible = useSyncExternalStore(subscribe, isVisible, serverSnapshot);
 
   function choose(choice: "accepted" | "declined") {
@@ -51,12 +53,11 @@ export function CookieNotice() {
     <aside className={styles.notice} aria-labelledby="cookie-notice-title">
       <p className="section-label">
         <span className="dot" aria-hidden="true" />
-        Privacy matters
+        {notice.label}
       </p>
-      <h2 id="cookie-notice-title">Cookies &amp; your privacy</h2>
+      <h2 id="cookie-notice-title">{notice.title}</h2>
       <p className={styles.copy}>
-        Learn how cookies and similar technologies may be used on this site in
-        our <Link href="/cookies">Cookie Policy</Link>.
+        {notice.body} <Link href={notice.href}>{notice.linkLabel}</Link>.
       </p>
       <div className={styles.actions}>
         <button
@@ -64,14 +65,14 @@ export function CookieNotice() {
           type="button"
           onClick={() => choose("accepted")}
         >
-          Accept
+          {notice.accept}
         </button>
         <button
           className={styles.decline}
           type="button"
           onClick={() => choose("declined")}
         >
-          Decline
+          {notice.decline}
         </button>
       </div>
     </aside>

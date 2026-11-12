@@ -1,3 +1,4 @@
+import { getContent } from "@/sanity/lib/content";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "lenis/dist/lenis.css";
@@ -18,36 +19,15 @@ const dm = localFont({
   variable: "--font-dm",
   display: "swap",
 });
-export const metadata: Metadata = {
-  metadataBase: new URL("https://gotechnologies.lk"),
-  title: "Go Technologies | Technology for Journeys That Matter",
-  description:
-    "Go Technologies builds digital products that make travel and mobility simpler, more connected and easier to navigate - starting with GoChauffeur in Sri Lanka.",
-  robots: { index: false, follow: false },
-  openGraph: {
-    title: "Go Technologies | Technology for Journeys That Matter",
-    description:
-      "Go Technologies builds digital products that make travel and mobility simpler, more connected and easier to navigate - starting with GoChauffeur in Sri Lanka.",
-    images: [
-      {
-        url: "/images/go-technologies-preview.png",
-        width: 1920,
-        height: 1080,
-        alt: "Go Technologies — Everything begins with Go.",
-        type: "image/png",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: [
-      {
-        url: "/images/go-technologies-preview.png",
-        alt: "Go Technologies — Everything begins with Go.",
-      },
-    ],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { seo } = await getContent();
+  return {
+    ...seo,
+    metadataBase: new URL(seo.metadataBase),
+    robots: { index: false, follow: false },
+  } as Metadata;
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {

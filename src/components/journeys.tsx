@@ -3,39 +3,14 @@
 import Image from "next/image";
 import { useRef, useState, type KeyboardEvent } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { copy } from "@/lib/content";
+import type { ContentProps } from "@/sanity/types";
 import { Arrow } from "./brand";
 import { JourneyPreview } from "./journey-preview";
 
-const scenes = [
-  {
-    image: "sri-lanka-airport-arrival",
-    alt: "Airport pickup with a terminal, plane, traveller with luggage and chauffeur car",
-    position: "50% 50%",
-  },
-  {
-    image: "tangalle-coast",
-    alt: "A car travelling between a home and a hotel along a connecting road",
-    position: "55% 50%",
-  },
-  {
-    image: "sri-lanka-tourist",
-    alt: "A day journey with a hotel, traveller, clock and chauffeur car",
-    position: "45% 50%",
-  },
-  {
-    image: "sigiriya-mist",
-    alt: "A multi-day touring scene with tea hills, a stupa, coast and Sigiriya-inspired rock",
-    position: "50% 60%",
-  },
-  {
-    image: "sri-lanka-sigiriya",
-    alt: "A flexible itinerary map with destination pins, alternative routes and a planning screen",
-    position: "50% 50%",
-  },
-];
+export function Journeys({ content }: ContentProps) {
+  const { copy } = content;
+  const scenes = content.settings.images.journeys;
 
-export function Journeys() {
   const [active, setActive] = useState(0);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const reduceMotion = useReducedMotion();
@@ -76,7 +51,7 @@ export function Journeys() {
               role="tabpanel"
               id={`journey-panel-${index}`}
               aria-labelledby={`journey-tab-${index}`}
-              key={scene.image + index}
+              key={scene.src + index}
               initial={false}
               animate={{
                 opacity: active === index ? 1 : 0,
@@ -89,7 +64,7 @@ export function Journeys() {
               aria-hidden={active !== index}
             >
               <Image
-                src={`/images/${scene.image}.webp`}
+                src={scene.src}
                 alt=""
                 fill
                 sizes="(max-width: 900px) 100vw, 52vw"
@@ -132,7 +107,7 @@ export function Journeys() {
           </div>
           <a
             className="journey-contact"
-            href={`mailto:hello@gotechnologies.lk?subject=${encodeURIComponent(`GoChauffeur - ${copy.product.journeys[active]}`)}`}
+            href={`mailto:${content.settings.contactEmail}?subject=${encodeURIComponent(`GoChauffeur - ${copy.product.journeys[active]}`)}`}
           >
             <span>{copy.actions.contact}</span>
             <Arrow />
