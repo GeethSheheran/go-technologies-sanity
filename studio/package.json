@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "sanity build",
-    "build:vercel": "sanity build && node scripts/package-vercel.mjs",
+    "build:vercel": "SANITY_STUDIO_BASEPATH=/studio sanity build && node scripts/package-vercel.mjs",
     "check:vercel": "node scripts/check-vercel.mjs",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",

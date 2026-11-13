@@ -12,7 +12,6 @@ import { MotionSystem } from "@/components/motion-system";
 import { BrandSplash } from "@/components/brand-splash";
 import { SplashLogo } from "@/components/splash-logo";
 import { CookieNotice } from "@/components/cookie-notice";
-export const dynamic = "force-dynamic";
 export default async function Home() {
   const content = await getContent();
   return (
