@@ -75,7 +75,7 @@ are unnecessary for this static-assets Worker.
 | URL | The full Cloudflare deploy-hook URL, not the website URL |
 | Dataset | `production` |
 | Trigger on | Create and Update |
-| Filter | `_id match "website-*"` |
+| Filter | `string::startsWith(_id, "website-")` |
 | Method | `POST` |
 | Enabled | Yes |
 | Draft and version triggers | Off |
@@ -84,6 +84,11 @@ are unnecessary for this static-assets Worker.
 The hook URL begins with
 `https://api.cloudflare.com/client/v4/workers/builds/deploy_hooks/`.
 Its unique suffix authorizes builds: do not commit it or put it in public code.
+
+Use the prefix function exactly as shown. GROQ `match` is a text-search
+operator, not an ID-prefix check: `_id match "website-*"` does not match these
+hyphenated document IDs. The prefix filter was verified against all 13 published
+website documents.
 
 5. Save the webhook, then publish an intended content change in Studio.
 6. Check Sanity's webhook delivery log and Cloudflare's build history. The deploy
