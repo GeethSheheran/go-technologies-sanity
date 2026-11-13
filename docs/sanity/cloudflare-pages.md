@@ -1,5 +1,7 @@
 # Website and Studio on Cloudflare Pages
 
+For a complete new deployment, follow [the Cloudflare Workers setup guide](../cloudflare-deployment.md).
+
 ## Cloudflare Workers (current production deployment)
 
 The production build log uses `npx wrangler deploy`, so it is a Workers project.
@@ -38,4 +40,4 @@ requests and login in a browser. Confirm the existing documents appear without
 running a migration. The build does not modify Sanity data.
 
 Publishing content still requires a new website build until a Sanity webhook
-is connected to a Cloudflare Pages deploy hook.
+is connected to the deploy hook for the selected Workers or Pages project.

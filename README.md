@@ -3,7 +3,7 @@
 ## Sanity CMS
 
 The standalone Studio is in `studio/`, connected to project `pk1w379x`, dataset
-`production`. Run `npm run studio` and open http://localhost:3333/studio. Website preview:
+`production`. Run `npm run studio` and open http://localhost:3333. Website preview:
 `npm run dev`, then http://localhost:3000. The migrated content is available under
 **Website Content → Home Page → Hero** and the other section names.
 
@@ -11,8 +11,8 @@ See [editing and developer instructions](docs/sanity/README.md),
 [content mapping](docs/sanity/content-map.md), and the
 [migration verification report](docs/sanity/migration-report.json).
 
-Local CMS mode is enabled through ignored `.env.local`. Production deployment
-and automatic publishing have not been activated. Run `npm run check:cms` for
+Local CMS mode is enabled through ignored `.env.local`. The Cloudflare build
+explicitly enables published CMS content. Run `npm run check:cms` for
 content-preservation and mapper checks; the historical PDF check remains intact.
 
 Next.js App Router frontend for Mr. Akeel, based on the supplied Go Technologies brand direction and client website content. Sanity content editing is integrated locally. No booking engine, registration database, tracking, or form backend is added.
@@ -24,7 +24,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000. Node.js 22 or newer is recommended.
+Open http://localhost:3000. Use Node.js 24 (see `.node-version`).
 
 ```sh
 npm run build
@@ -37,26 +37,24 @@ npm run check:copy
 
 ## Cloudflare Workers deployment
 
-The site uses Next.js static export. `npm run build` generates `out/`, including
-the homepage, legal pages, JavaScript, images, and fonts. Cloudflare serves these
-files directly using `wrangler.jsonc`; this deployment needs no Worker script or
-Next.js server. Images use their original files because the Next.js image
-optimization server is unavailable on a static host.
+Follow the [complete Cloudflare setup guide](docs/cloudflare-deployment.md).
+One Worker hosts the website at `/` and the content editor at `/studio`.
 
-For the `go-technologies` Worker, set the repository root as the build root and use:
-
-- Build command: `npm run build`
-- Deploy command: `npx wrangler@4 deploy`
+- Worker name: `go-technologies-sanity`
+- Build command: `npm run build:cloudflare`
+- Deploy command: `npx wrangler@4.161.0 deploy`
+- Root directory: repository root (`/`)
+- Production branch: `main`
 - Node.js version: `24`
 
-Redeploy after committing the configuration. Remove any old deploy command that
-targets a generated Worker or `.next/` entrypoint. Wrangler uploads only `out/`.
-Preview locally after building with `npx wrangler@4 dev`; `next start` does not
-support static exports. Unknown URLs return the exported 404 page.
+The combined build reads published Sanity content, exports the website, installs
+and builds Studio, and packages everything in `out/`. Wrangler uploads only that
+directory. `npm run build` alone omits Studio and does not enable CMS content.
 
-Cloudflare Error 1101 means a Worker threw a JavaScript exception; it does not
-identify the exception. If diagnosing the previous deployment, inspect its
-Observability logs for the failing request and stack trace.
+Content publishing requires a new build. Connect a Sanity webhook to a Cloudflare
+Workers deploy hook as described in the guide to automate this. No Sanity write
+token is needed. Preview the combined output with `npx wrangler@4.161.0 dev`;
+`next start` does not support static exports.
 
 ## Source of truth
 
