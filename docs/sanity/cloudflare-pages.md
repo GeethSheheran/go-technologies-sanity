@@ -1,5 +1,19 @@
 # Website and Studio on Cloudflare Pages
 
+## Cloudflare Workers (current production deployment)
+
+The production build log uses `npx wrangler deploy`, so it is a Workers project.
+Keep the build command `npm run build:cloudflare` and deploy command
+`npx wrangler deploy`. The root Wrangler configuration uploads `out` and names
+the existing Worker `go-technologies-sanity`.
+
+Studio tool routes rewrite to the canonical `/studio` URL. Do not target
+`/studio/index.html` or add a `/studio` self-rewrite: Workers HTML normalization
+can reject those rules as infinite loops. Static and vendor paths have no SPA
+rewrite, so missing assets remain 404 responses.
+
+## Pages alternative
+
 The default `npm run build` exports only the Next.js website. Vercel builds the
 separate Studio service using `vercel.json`; Cloudflare Pages does not use that
 configuration.

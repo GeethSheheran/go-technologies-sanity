@@ -16,11 +16,12 @@ await cp(
 await writeFile(
   path.join(out, "_redirects"),
   [
-    "/studio /studio/index.html 200",
-    "/studio/ /studio/index.html 200",
+    // /studio is served directly from studio/index.html by HTML handling.
+    // Target its canonical URL, not index.html: Workers rejects wildcard
+    // rewrites to index.html as potential HTML-normalization redirect loops.
     ...["structure", "releases", "intent"].flatMap((tool) => [
-      `/studio/${tool} /studio/index.html 200`,
-      `/studio/${tool}/* /studio/index.html 200`,
+      `/studio/${tool} /studio 200`,
+      `/studio/${tool}/* /studio 200`,
     ]),
     "",
   ].join("\n"),
